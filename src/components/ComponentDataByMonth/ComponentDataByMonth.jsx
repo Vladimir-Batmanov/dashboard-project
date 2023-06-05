@@ -1,0 +1,54 @@
+import css from "./ComponentDataByMonth.module.css";
+import { useEffect, useRef } from "react";
+import Chart from "chart.js/auto";
+
+export const ComponentDataByMonth = ({ data }) => {
+  const chartContainerRef = useRef(null);
+  const chartInstanceRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = chartContainerRef.current.getContext("2d");
+
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.destroy(); 
+    }
+
+    chartInstanceRef.current = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: data.map((item) => item.Month),
+        datasets: [
+          {
+            label: "Income",
+            data: data.map((item) => item.Income),
+            borderColor: "rgba(0, 123, 255, 1)",
+            borderWidth: 1,
+            fill: {
+              target: "origin",
+              above: "rgba(0, 123, 255, 0.2)",
+              below: "rgba(0, 123, 255, 0)",
+            },
+          },
+        ],
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false, 
+          },
+        },
+        scales: {
+          y: {
+            display: false, 
+          },
+        },
+      },
+    });
+  }, [data]);
+
+  return (
+    <div className={css.root}>
+      <canvas ref={chartContainerRef} />
+    </div>
+  );
+};

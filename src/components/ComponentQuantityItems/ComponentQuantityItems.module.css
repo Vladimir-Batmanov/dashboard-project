@@ -1,0 +1,35 @@
+.root {
+  color: #fff;
+  margin-left: 20px;
+  color: #fff;
+}
+
+.title {
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.rowTitle {
+  width: 56%;
+}
+
+.value {
+  width: 22%;
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 50%;
+}

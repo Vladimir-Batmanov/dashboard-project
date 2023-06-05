@@ -1,0 +1,13 @@
+.root {
+    margin-bottom: 30px;
+    width: 300px; 
+    height: 200px; 
+
+}
+
+.chartLeft {
+    box-sizing: border-box;
+    display: block;
+    height: 150px;
+    width: 200px;
+}

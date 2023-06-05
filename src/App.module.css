@@ -1,0 +1,48 @@
+:global(#root) {
+    width:100%;
+}
+  
+.root {
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding: 30px;
+}
+
+.mainChart {
+    display: flex;
+    flex-grow: 1;
+}
+
+.leftColumn {
+    width: 300px;
+}
+
+.rightColumn {
+    width: 150px;
+}
+
+.rightColumnColor {
+    padding: 10px;
+    text-align: center;
+    background-color: #1d1d3a;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 300px;
+}
+
+.chart {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 33px;
+    line-height: 36px;
+    border: 25px solid #7a1995;
+}
